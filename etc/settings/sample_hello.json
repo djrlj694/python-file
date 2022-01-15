@@ -1,0 +1,79 @@
+{
+    "environments": {
+      "default": {
+        "debug": "yes",
+        "verbose": "yes",
+        "source": "dev/source.dat",
+        "target": "DBDEV"
+      },
+      "development": {
+        "debug": "yes",
+        "verbose": "yes",
+        "source": "dev/source.dat",
+        "target": "DBDEV"
+      },
+      "test": {
+        "debug": "yes",
+        "verbose": "yes",
+        "source": "dev/source.dat",
+        "target": "DBDEV"
+      },
+      "stage": {
+        "debug": "yes",
+        "verbose": "yes",
+        "source": "prod/source.dat",
+        "target": "DBPROD"
+      },
+      "production": {
+        "debug": "yes",
+        "verbose": "yes",
+        "source": "prod/source.dat",
+        "target": "DBPROD"
+      }
+    },
+    "files": {
+      "pre": {
+        "commands": [
+          "echo -n $(date +'%F %T') \"[INFO]:\" \"Running file {{.Name}}...\" >> file.log"
+        ]
+      },
+      "post": {
+        "commands": [
+          "echo \"done.\" >> file.log"
+        ]
+      },
+      "extract": {
+        "description": "Data extraction file.",
+        "commands": [
+          "echo \"Hello, ${USER}!\"",
+          "echo \"We extracted data from file '{{.Parameters.Environment.source}}'.\""
+        ]
+      },
+      "transform": {
+        "description": "Data transformation file.",
+        "commands": [
+          "echo \"Hi again, ${USER}!\"",
+          "echo \"We transformed the extracted data.\""
+        ]
+      },
+      "load": {
+        "description": "Data loading file.",
+        "commands": [
+          "echo \"Goodbye, ${USER}!\"",
+          "echo \"We loaded the transformed data to database '{{.Parameters.Environment.target}}'.\""
+        ]
+      }
+    },
+    "pipelines": {
+      "etl1": [
+        "extract",
+        "transform",
+        "load"
+      ],
+      "etl2": [
+        "extract",
+        "transform",
+        "load"
+      ]
+    }
+  }
