@@ -28,7 +28,7 @@ TODO: Usage instructions for this project are pending.
 
 Files in this project are organized as follows:
 
-```bash
+```console
 .
 ├── .editorconfig
 ├── .gitattributes
@@ -36,12 +36,24 @@ Files in this project are organized as follows:
 ├── .pre-commit-config.yaml
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
+├── Dockerfile
 ├── README.md
 ├── REFERENCES.md
 ├── bin/
+├── docker-compose.yml
+├── docks/
 ├── etc/
 │   ├── content/
+│   │   ├── sample_email_body.html
+│   │   ├── sample_email_body.md
+│   │   ├── sample_email_body.md.jinja2
+│   │   └── sample_email_body.txt
 │   ├── data/
+│   │   ├── sample_3x3_header.csv
+│   │   └── sample_3x3_noheader.csv
+│   └── settings/
+│       ├── sample_hello.json
+│       └── sample_hello.yaml
 ├── src/
 └── tests/
 ```
