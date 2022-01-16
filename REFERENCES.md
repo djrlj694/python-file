@@ -13,7 +13,23 @@ developing or maintaining [File](README.md).
 ## Markup Languages: YAML
 
 1. https://blog.daemonl.com/2016/02/yaml.html
-2. https://stackoverflow.com/questions/33989612/yaml-equivalent-of-array-of-objects-in-json
+2. https://onlineyamltools.com/convert-yaml-to-json
+3. https://stackoverflow.com/questions/22268952/what-is-the-difference-between-yaml-and-yml-extension
+4. https://stackoverflow.com/questions/33989612/yaml-equivalent-of-array-of-objects-in-json
+
+## Platforms: Docker
+
+### Compose
+
+1. https://docs.docker.com/compose/reference/build/
+2. https://docs.docker.com/compose/reference/down/
+3. https://docs.docker.com/compose/reference/logs/
+4. https://docs.docker.com/compose/reference/run/
+5. https://docs.docker.com/compose/reference/up/
+
+### Python
+
+1. https://docs.docker.com/language/python/build-images/
 
 ## Platforms: Make
 
