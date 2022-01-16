@@ -1,0 +1,16 @@
+# REFERENCES
+# 1. https://github.com/cosmicpython/code/tree/appendix_project_structure
+# 2. https://github.com/mrako/python-example-project
+
+version: "3"
+
+services:
+  project:
+    build: .
+
+  test:
+    build: tests
+    volumes:
+      - .:/src
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
