@@ -31,6 +31,7 @@ Files in this project are organized as follows:
 ```console
 .
 ├── .editorconfig
+├── .env
 ├── .gitattributes
 ├── .gitignore
 ├── .pre-commit-config.yaml
@@ -40,10 +41,17 @@ Files in this project are organized as follows:
 ├── README.md
 ├── REFERENCES.md
 ├── bin/
+├── bin
+│   ├── debug.sh
+│   └── test.sh
 ├── docker-compose.yml
 ├── docks/
 ├── etc/
 │   ├── content/
+│   │   ├── debug_custom.txt.tmpl
+│   │   ├── debug_path.txt.tmpl
+│   │   ├── debug_set.txt.tmpl
+│   │   ├── debug_standard.txt.tmpl
 │   │   ├── sample_email_body.html
 │   │   ├── sample_email_body.md
 │   │   ├── sample_email_body.md.jinja2
@@ -55,7 +63,15 @@ Files in this project are organized as follows:
 │       ├── sample_hello.json
 │       └── sample_hello.yaml
 ├── src/
+│   ├── bash/
+│   │   ├── functions.sh
+│   │   ├── sources.sh
+│   │   └── variables.env
+│   └── python/
+│       └── file/
+│           └── __init__.py
 └── tests/
+    └── __init__.py
 ```
 
 ## Builds and Testing
