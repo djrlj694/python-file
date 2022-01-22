@@ -5,7 +5,10 @@ repos:
   rev: v4.1.0
   hooks:
   - id: check-added-large-files
+  - id: check-ast
   - id: check-builtin-literals
+  - id: check-byte-order-marker
+  - id: check-case-conflict
   - id: check-docstring-first
   - id: check-executables-have-shebangs
   - id: check-json
@@ -14,9 +17,11 @@ repos:
   # - id: check-xml
   - id: check-yaml
   - id: debug-statements
+  # - id: detect-aws-credentials
   - id: detect-private-key
   - id: double-quote-string-fixer
   - id: end-of-file-fixer
+  - id: mixed-line-ending
   - id: name-tests-test
   - id: pretty-format-json
     args: [--autofix, --no-sort-keys]
