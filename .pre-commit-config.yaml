@@ -79,7 +79,7 @@ repos:
   rev: v0.931
   hooks:
   - id: mypy
-    args: [--install-types, --non-interactive]
+    args: [--ignore-missing-imports, --install-types, --non-interactive]
 - repo: https://github.com/Lucas-C/pre-commit-hooks-go
   rev: v1.0.1
   hooks:
