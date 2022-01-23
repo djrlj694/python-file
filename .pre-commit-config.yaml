@@ -13,16 +13,25 @@ repos:
   - id: check-executables-have-shebangs
   - id: check-json
   - id: check-merge-conflict
+  - id: check-shebang-scripts-are-executable
+  # - id: check-symlinks
   # - id: check-toml
+  - id: check-vcs-permalinks
   # - id: check-xml
   - id: check-yaml
   - id: debug-statements
+  - id: destroyed-symlinks
   # - id: detect-aws-credentials
   - id: detect-private-key
   - id: double-quote-string-fixer
   - id: end-of-file-fixer
+  # - id: file-contents-sorter
+  - id: fix-byte-order-marker
+  - id: fix-encoding-pragma
+  # - id: forbid-new-submodules
   - id: mixed-line-ending
   - id: name-tests-test
+  - id: no-commit-to-branch
   - id: pretty-format-json
     args: [--autofix, --no-sort-keys]
   # - id: requirements-txt-fixer
