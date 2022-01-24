@@ -8,7 +8,8 @@ consistency.
 File is a software project that is premised on the possibility of easier, more
 consistent file access and management when writing and testingPython modules,
 packages, and [command-line interface (CLI)][CLI] applications. It seeks to provide a
-common [application programming interface (API)][API] for working with files, regardless of the underlying file type.
+common [application programming interface (API)][API] for working with files,
+regardless of the underlying file type.
 
 ## Getting Started
 
@@ -31,7 +32,7 @@ system:
 * [GNU Bash][GNU Bash] 3.2.57 or higher
 
 In addition, for the purpose of [continuous integration/development (CI/CD)][CICD], the
-the optional installation of the following toolchain is encouraged:
+optional installation of the following toolchain is encouraged:
 
 * [Git][Git] 2.32.0 or higher
 * [GitFlow][GitFlow] 0.4.1 or higher
