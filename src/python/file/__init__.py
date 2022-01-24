@@ -5,6 +5,7 @@ from typing import List
 
 from .base import BaseFile
 from .csv import CSVFile
+from .jinja2 import Jinja2File
 from .text import TextFile
 
 
@@ -28,5 +29,6 @@ __modified_date__ = 'Jan 23, 2022'
 __all__: List[str] = [
     'BaseFile',
     'CSVFile',
+    'Jinja2File',
     'TextFile',
 ]

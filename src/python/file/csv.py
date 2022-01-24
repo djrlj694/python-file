@@ -37,6 +37,8 @@ class CSVFile(TextFile):
     ----------
     `path` : `Path`
         The file's pathname
+    `text` : `str`
+        The file's raw textual content
     `delimiter` : `str`
         The file's field delimiter
 
@@ -44,6 +46,8 @@ class CSVFile(TextFile):
     -------
     `to_df(*args, **kwargs)`
         Renders a data frame representation of the file.
+    `read()`
+        Reads the file's raw textual content.
     """
 
     # -- Instance Attributes -- #

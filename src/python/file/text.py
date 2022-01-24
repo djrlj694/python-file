@@ -35,6 +35,8 @@ class TextFile(BaseFile):
     ----------
     `path` : `Path`
         The file's pathname
+    `text` : `str`
+        The file's raw textual content
 
     Methods
     -------
