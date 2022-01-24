@@ -55,6 +55,71 @@ developing or maintaining [File](README.md).
 
 ## Programming Languages: Python
 
+### Abstract Base Classes (ABCs)
+
+1. https://coderzcolumn.com/tutorials/python/abc-how-to-create-abstract-base-classes-in-python
+2. https://www.geeksforgeeks.org/abstract-classes-in-python/
+3. https://ivergara.github.io/ABC-and-dataclasses.html
+4. https://docs.python.org/3/library/abc.html
+5. https://pythonin1minute.com/how-to-unit-test-abstract-base-classes-in-python/
+6. https://stackoverflow.com/questions/11217878/python-2-7-combine-abc-abstractmethod-and-classmethod
+7. https://towardsdatascience.com/abstract-base-classes-in-python-fundamentals-for-data-scientists-3c164803224b
+8. https://vegibit.com/python-abstract-base-classes/
+
+### API Documentation
+
+1. https://numpydoc.readthedocs.io/en/latest/format.html
+2. https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html
+3. https://realpython.com/documenting-python-code
+4. https://stackoverflow.com/questions/1523427/what-is-the-common-header-format-of-python-files
+
+### Command-Line Interface (CLI)
+
+1. https://docs.python.org/3/library/argparse.html
+2. https://docs.python.org/3/using/cmdline.html
+3. https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
+
+### Data Classes
+
+1. https://florimond.dev/blog/articles/2018/10/reconciling-dataclasses-and-properties-in-python/
+2. https://www.geeksforgeeks.org/data-classes-in-python-set-4-inheritance/
+3. https://hackthedeveloper.com/python-data-class-inheritance/
+4. https://ivergara.github.io/ABC-and-dataclasses.html
+5. https://rednafi.github.io/digressions/python/2020/03/12/python-dataclasses.html
+6. https://docs.python.org/3/library/dataclasses.html
+7. https://realpython.com/python-data-classes/
+8. https://stackoverflow.com/questions/51125415/how-do-i-document-a-constructor-for-a-class-using-python-dataclasses
+
+### File System Management
+
+1. https://pbpython.com/pathlib-intro.html
+2. https://discuss.python.org/t/pathlib-absolute-vs-resolve/2573/5
+3. https://docs.python.org/3/library/pathlib.html
+4. https://realpython.com/python-pathlib/
+5. https://stackoverflow.com/questions/2860153/how-do-i-get-the-parent-directory-in-python
+6. https://stackoverflow.com/questions/3277503/how-to-read-a-file-line-by-line-into-a-list/35622867#35622867
+7. https://stackoverflow.com/questions/3430372/how-do-i-get-the-full-path-of-the-current-files-directory
+8. https://stackoverflow.com/questions/3925614/how-do-you-read-a-file-into-a-list-in-python
+9. https://stackoverflow.com/questions/48190959/how-do-i-append-a-string-to-a-path-in-python
+10. https://stackoverflow.com/questions/51125415/how-do-i-document-a-constructor-for-a-class-using-python-dataclasses
+
+### Iterators
+
+1. https://stackoverflow.com/questions/4019971/how-to-implement-iter-self-for-a-container-object-python
+
+### Jinja2
+
+1. https://pypi.org/project/Jinja2/
+
+### Magic Methods
+
+1. https://medium.com/python-features/magic-methods-demystified-3c9e93144bf7
+2. https://docs.python.org/3/reference/datamodel.html#special-method-names
+3. https://rszalski.github.io/magicmethods/
+4. https://stackoverflow.com/questions/19703335/whats-the-difference-between-dir-and-dir
+5. https://stackoverflow.com/questions/9659361/order-of-results-from-pythons-dir-function/9659377
+6. https://www.tutorialsteacher.com/python/magic-methods-in-python
+
 ### Modules/Packages
 
 1. https://medium.com/analytics-vidhya/building-a-python-package-in-minutes-7bb702a6eb65
@@ -65,6 +130,11 @@ developing or maintaining [File](README.md).
 5. https://realpython.com/pypi-publish-python-package/
 6. https://realpython.com/run-python-scripts/
 7. https://towardsdatascience.com/publishing-your-own-python-package-3762f0d268ec
+
+### Object-Oriented Programming (OOP)
+
+1. https://www.geeksforgeeks.org/calling-a-super-class-constructor-in-python/
+2. https://realpython.com/python-super/
 
 ### Project Structure
 
@@ -78,16 +148,50 @@ developing or maintaining [File](README.md).
 7. https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html
 8. https://realpython.com/python-application-layouts/
 
+### `PYTHONPATH`
+
+1. https://bic-berkeley.github.io/psych-214-fall-2016/using_pythonpath.html
+2. https://www.geeksforgeeks.org/pythonpath-environment-variable-in-python/
+3. https://www.simplilearn.com/tutorials/python-tutorial/python-path
+4. https://www.tutorialspoint.com/What-is-PYTHONPATH-environment-variable-in-Python
+
+### Standard Library
+
+1. https://docs.python.org/3/library/abc.html
+2. https://docs.python.org/3/library/argparse.html
+3. https://docs.python.org/3/library/dataclasses.html
+4. https://docs.python.org/3/library/index.html
+5. https://docs.python.org/3/library/pathlib.html
+6. https://docs.python.org/3/library/typing.html
+7. https://docs.python.org/3/library/unittest.html
+
+### Strings
+
+1. https://www.geeksforgeeks.org/str-vs-repr-in-python/
+2. https://realpython.com/python-f-strings
+3. https://realpython.com/python-strings/
+
 ### Testing
 
 1. https://www.codingame.com/playgrounds/10614/python-unit-test-with-unittest
 2. https://gist.github.com/tasdikrahman/2bdb3fb31136a3768fac
 3. https://www.patricksoftwareblog.com/python-unit-testing-structuring-your-project/
-4. https://docs.python.org/3/library/unittest.html
-5. https://docs.python-guide.org/writing/tests/
-6. https://realpython.com/python-cli-testing/
-7. https://realpython.com/python-testing/
+4. https://python.plainenglish.io/unit-testing-in-python-structure-57acd51da923
+5. https://docs.python.org/3/library/unittest.html
+6. https://docs.python-guide.org/writing/tests/
+7. https://realpython.com/python-cli-testing/
+8. https://realpython.com/python-testing/
 
+### Tutorials
+
+1. http://stanford.edu/~jainr/basics.py
+
+### Type Hints
+
+1. https://www.python.org/dev/peps/pep-0484/
+2. https://docs.python.org/3/library/typing.html
+3. https://stackoverflow.com/questions/59955751/abcmeta-object-is-not-subscriptable-when-trying-to-annotate-a-hash-variable
+4. https://www.stefaanlippens.net/circular-imports-type-hints-python.html
 
 ## Software Engineering
 
