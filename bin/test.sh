@@ -14,7 +14,7 @@
 # - Robert (Bob) L. Jones
 #
 # CREATED: Jan 16, 2022
-# REVISED: Jan 16, 2022
+# REVISED: Jan 23, 2022
 # =========================================================================== #
 
 
@@ -36,4 +36,4 @@ PREFIX="$(dirname $(dirname $0))"
 
 
 # Run a Python package as if it were a Python script.
-__python -m unittest discover ${VERBOSEOPT} -s tests
+__python -m unittest discover ${VERBOSEOPT} tests "*_test.py"
