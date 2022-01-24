@@ -95,9 +95,11 @@ Files in this project are organized as follows:
 │       │   ├── __init__.py
 │       │   ├── base.py
 │       │   ├── csv.py
+│       │   ├── jinja2.py
 │       │   └── text.py
 └── tests/
     ├── csvfile_test.py
+    ├── jinja2file_test.py
     └── textfile_test.py
 ```
 
