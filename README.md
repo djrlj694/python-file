@@ -62,7 +62,6 @@ Files in this project are organized as follows:
 ├── README.md
 ├── REFERENCES.md
 ├── bin/
-├── bin
 │   ├── debug.sh
 │   └── test.sh
 ├── docker-compose.yml
