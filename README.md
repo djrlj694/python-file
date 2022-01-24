@@ -133,6 +133,7 @@ File possible. See [REFERENCES.md](REFERENCES.md) for a list of some.
 [CICD]: https://en.wikipedia.org/wiki/CI/CD
 [CLI]: https://en.wikipedia.org/wiki/Command-line_interface
 [Git]: https://git-scm.com/
+[Git for Windows]: https://gitforwindows.org
 [GitFlow]: https://github.com/nvie/gitflow
 [GNU Bash]: https://www.gnu.org/software/bash/
 [GNU Make]: https://www.gnu.org/software/make/
