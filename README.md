@@ -108,7 +108,17 @@ TODO: Build and testing instructions for this project are pending.
 
 ## Documentation
 
-Documentation for File is this README itself.
+Documentation for SHS App is this README itself, plus those listed in the
+subsections that follow.
+
+#### Community Health
+
+* [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)
+* [`CONTRIBUTING.md`](CONTRIBUTING.md)
+
+### Other
+
+* [`REFERENCES.md`](REFERENCES.md)
 
 ## Known Issues
 
@@ -127,6 +137,10 @@ File possible. See [REFERENCES.md](REFERENCES.md) for a list of some.
 [GNU Bash]: https://www.gnu.org/software/bash/
 [GNU Make]: https://www.gnu.org/software/make/
 [Linux]: https://www.linuxfoundation.org
+[Python]: https://www.python.org
 [Windows]: https://www.microsoft.com/en-us/windows
 [WSL]: https://docs.microsoft.com/en-us/windows/wsl/about
 [macOS]: https://www.apple.com/macos/
+[pre-commit]: https://github.com/pre-commit/pre-commit
+[test coverage]: https://en.wikipedia.org/wiki/Code_coverage
+[unit test]: hhttps://en.wikipedia.org/wiki/Unit_testing
