@@ -16,7 +16,7 @@ __author__ = 'Robert (Bob) L. Jones'
 __credits__ = ['Robert (Bob) L. Jones']
 
 __created_date__ = 'Jan 23, 2022'
-__modified_date__ = 'Jan 23, 2022'
+__modified_date__ = 'Jan 24, 2022'
 
 
 # =========================================================================== #
@@ -52,11 +52,12 @@ class Jinja2File(TextFile):
         Returns
         -------
         `str`
-            The unicode string.
+            The unicode string
         """
 
         # Read the file.
-        self.read()
+        if self.text == '':
+            self.read()
 
         # Create a Jinja2 template.
         template = Template(self.text)
