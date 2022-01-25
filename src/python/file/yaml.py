@@ -1,8 +1,10 @@
 """
-jinja2.py - A module defining a class (`Jinja2File`) to model a Jinja2 template
-file (`*.jinja2`).
+yaml.py - A module defining a class (`YAMLFile`) to model a YAML file
+(`*.yaml`).
 """
-from jinja2 import Template
+from typing import Any
+
+import yaml
 
 from .text import TextFile
 
@@ -15,7 +17,7 @@ from .text import TextFile
 __author__ = 'Robert (Bob) L. Jones'
 __credits__ = ['Robert (Bob) L. Jones']
 
-__created_date__ = 'Jan 23, 2022'
+__created_date__ = 'Jan 24, 2022'
 __modified_date__ = 'Jan 24, 2022'
 
 
@@ -24,43 +26,40 @@ __modified_date__ = 'Jan 24, 2022'
 # =========================================================================== #
 
 
-class Jinja2File(TextFile):
+class YAMLFile(TextFile):
     """
-    An object class modeling a Jinja2 template file.
+    An object class modeling a YAML file.
 
     Attributes
     ----------
-    `path` : `Path`
+    `path` : `str`
         The file's pathname
     `text` : `str`
         The file's raw textual content
 
     Methods
     -------
-    `read()`
-        Reads the file's raw textual content.
-    `render()`
-        Renders the file's template as a Unicode string.
+    `parse()`
+        Parses the first YAML document in the string and produces a
+        corresponding Python object.
     """
 
     # -- Output Methods -- #
 
-    def render(self, *args, **kwargs) -> str:
+    def parse(self) -> Any:
         """
-        Renders the template file as a Unicode string.
+        Parses the first YAML document in the string and produces a
+        corresponding Python object.
 
         Returns
         -------
-        `str`
-            The unicode string
+        `Any`
+            The Python object
         """
 
         # Read the file.
         if self.text == '':
             self.read()
 
-        # Create a Jinja2 template.
-        template = Template(self.text)
-
-        # Return the Unicode string.
-        return template.render(*args, **kwargs)
+        # Return the object.
+        return yaml.load(self.text, Loader=yaml.Loader)
