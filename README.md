@@ -97,11 +97,13 @@ Files in this project are organized as follows:
 │       │   ├── base.py
 │       │   ├── csv.py
 │       │   ├── jinja2.py
-│       │   └── text.py
+│       │   ├── text.py
+│       │   └── yaml.py
 └── tests/
     ├── csvfile_test.py
     ├── jinja2file_test.py
-    └── textfile_test.py
+    ├── textfile_test.py
+    └── yamlfile_test.py
 ```
 
 ## Builds and Testing
