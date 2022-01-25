@@ -7,6 +7,7 @@ from .base import BaseFile
 from .csv import CSVFile
 from .jinja2 import Jinja2File
 from .text import TextFile
+from .yaml import YAMLFile
 
 
 # =========================================================================== #
@@ -18,7 +19,7 @@ __author__ = 'Robert (Bob) L. Jones'
 __credits__ = ['Robert (Bob) L. Jones']
 
 __created_date__ = 'Jan 16, 2022'
-__modified_date__ = 'Jan 23, 2022'
+__modified_date__ = 'Jan 24, 2022'
 
 
 # =========================================================================== #
@@ -31,4 +32,5 @@ __all__: List[str] = [
     'CSVFile',
     'Jinja2File',
     'TextFile',
+    'YAMLFile',
 ]
