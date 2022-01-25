@@ -16,7 +16,7 @@ __author__ = 'Robert (Bob) L. Jones'
 __credits__ = ['Robert (Bob) L. Jones']
 
 __created_date__ = 'Jan 23, 2022'
-__modified_date__ = 'Jan 23, 2022'
+__modified_date__ = 'Jan 24, 2022'
 
 
 # =========================================================================== #
@@ -52,9 +52,7 @@ class TestJinja2File(unittest.TestCase):
 
         # Create objects to be tested.
         file1 = Jinja2File(path=PATH1)
-        file1.read()
         file2 = Jinja2File(path=PATH2)
-        file2.read()
 
         # Test assertions.
         self.assertEqual(
