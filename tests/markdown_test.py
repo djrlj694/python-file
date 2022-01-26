@@ -44,7 +44,7 @@ class TestMarkdownFile(unittest.TestCase):
 
     def test_MarkdownFile(self):
         """
-        Test the `MarkdownFile` class.
+        Tests the `MarkdownFile` class.
         """
 
         # Create objects to be tested.
