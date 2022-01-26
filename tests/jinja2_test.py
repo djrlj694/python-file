@@ -45,9 +45,9 @@ PATH2 = PARENT / NAME2
 
 class TestJinja2File(unittest.TestCase):
 
-    def test_Jinja2File_init(self):
+    def test_Jinja2File(self):
         """
-        Tests creating a `Jinja2File` object.
+        Tests the `Jinja2File` class.
         """
 
         # Create objects to be tested.
