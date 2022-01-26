@@ -1,5 +1,5 @@
 """
-markdownfile_test.py - A module for testing the `MarkdownFile` class.
+markdown_test.py - A module for testing the `MarkdownFile` class.
 """
 import os
 import unittest
