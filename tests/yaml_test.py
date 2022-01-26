@@ -44,7 +44,7 @@ class TestYAMLFile(unittest.TestCase):
 
     def test_YAMLFile(self):
         """
-        Test the `YAMLFile` class.
+        Tests the `YAMLFile` class.
         """
 
         # Create objects to be tested.

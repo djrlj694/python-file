@@ -43,9 +43,9 @@ PATH = PARENT / NAME
 
 class TestCSVFile(unittest.TestCase):
 
-    def test_CSVFile_init(self):
+    def test_list_CSVFile(self):
         """
-        Tests creating a `CSVFile` object.
+        Tests the `CSVFile` class.
         """
 
         # Create objects to be tested.
