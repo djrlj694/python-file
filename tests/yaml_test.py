@@ -1,5 +1,5 @@
 """
-yamlfile_test.py - A module for testing the `YAMLFile` class.
+yaml_test.py - A module for testing the `YAMLFile` class.
 """
 import os
 import unittest
@@ -16,7 +16,7 @@ __author__ = 'Robert (Bob) L. Jones'
 __credits__ = ['Robert (Bob) L. Jones']
 
 __created_date__ = 'Jan 24, 2022'
-__modified_date__ = 'Jan 24, 2022'
+__modified_date__ = 'Jan 26, 2022'
 
 
 # =========================================================================== #
