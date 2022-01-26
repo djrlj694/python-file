@@ -1,11 +1,11 @@
 """
-csvfile_test.py - A module for testing the `CSVFile` class.
+yaml_test.py - A module for testing the `YAMLFile` class.
 """
 import os
 import unittest
 from pathlib import Path
 
-from file import CSVFile
+from file import YAMLFile
 
 
 # =========================================================================== #
@@ -15,8 +15,8 @@ from file import CSVFile
 __author__ = 'Robert (Bob) L. Jones'
 __credits__ = ['Robert (Bob) L. Jones']
 
-__created_date__ = 'Jan 23, 2022'
-__modified_date__ = 'Jan 23, 2022'
+__created_date__ = 'Jan 24, 2022'
+__modified_date__ = 'Jan 26, 2022'
 
 
 # =========================================================================== #
@@ -29,10 +29,9 @@ __modified_date__ = 'Jan 23, 2022'
 PREFIX = Path(os.getenv('PREFIX', default='.')).resolve()
 
 ETC = PREFIX / 'etc'
+PARENT = ETC / 'settings'
 
-PARENT = ETC / 'data'
-
-NAME = 'sample_3x3_header.csv'
+NAME = 'sample_hello.yaml'
 PATH = PARENT / NAME
 
 
@@ -41,22 +40,22 @@ PATH = PARENT / NAME
 # =========================================================================== #
 
 
-class TestCSVFile(unittest.TestCase):
+class TestYAMLFile(unittest.TestCase):
 
-    def test_CSVFile_init(self):
+    def test_YAMLFile(self):
         """
-        Tests creating a `CSVFile` object.
+        Test the `YAMLFile` class.
         """
 
         # Create objects to be tested.
-        file = CSVFile(path=PATH, delimiter='|')
+        file = YAMLFile(path=PATH)
 
         # Test assertions.
         self.assertEqual(
             # Actual
-            list(file)[0],
+            file.parse()['environments']['production']['target'],
             # Expected
-            ['Col_A', 'Col_B', 'Col_C'],
+            'DBPROD',
         )
 
 
