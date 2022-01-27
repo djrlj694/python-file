@@ -31,7 +31,17 @@ system:
 * [Python][Python] 3.9.7 or higher
 * [GNU Bash][GNU Bash] 3.2.57 or higher
 
-In addition, for the purpose of [continuous integration/development (CI/CD)][CICD], the
+In addition, this project has multiple 3rd-party Python package dependencies:
+
+* [Jinja2][jinja] 2.11.3 or higher
+* [Markdown][markdown] 3.3.6 or higher
+* [Pandas][pandas] 1.3.4 or higher
+* [YAML][yaml] 0.2.5 or higher
+
+These packages come preloaded with the [Anaconda][Anaconda] distribution of
+Python.
+
+Lastly, for the purpose of [continuous integration/development (CI/CD)][CICD], the
 optional installation of the following toolchain is encouraged:
 
 * [Git][Git] 2.32.0 or higher
@@ -40,7 +50,16 @@ optional installation of the following toolchain is encouraged:
 
 ### Installation
 
-TODO: Installation instructions for this project are pending.
+File currently is not setup for installation as a Python package, let alone
+registered to a Python package repository like [Python Package Index (PyPI)][PyPI],
+though that is the project's ultimate goal. So, in the mean time, to install
+File as a software project for experimentation or contributing to Files, run the
+following command:
+
+```shell
+$ git clone https://github.com/djrlj694/python-file.git
+```
+
 
 ### Usage
 
@@ -50,7 +69,7 @@ TODO: Usage instructions for this project are pending.
 
 Files in this project are organized as follows:
 
-```console
+```shell
 .
 ├── .editorconfig
 ├── .env
@@ -97,18 +116,30 @@ Files in this project are organized as follows:
 │       │   ├── base.py
 │       │   ├── csv.py
 │       │   ├── jinja2.py
+│       │   ├── markdown.py
 │       │   ├── text.py
 │       │   └── yaml.py
 └── tests/
-    ├── csvfile_test.py
-    ├── jinja2file_test.py
-    ├── textfile_test.py
-    └── yamlfile_test.py
+    ├── csv_test.py
+    ├── jinja2_test.py
+    ├── markdown_test.py
+    ├── text_test.py
+    └── yaml_test.py
 ```
 
 ## Builds and Testing
 
-TODO: Build and testing instructions for this project are pending.
+[Unit tests][unit test] are included in the directory `tests`. Individual unit tests of
+tests of related Python functions, class properties and methods, etc are
+organized into test suites, where each test suite represents a Python module
+following the naming convention `<MODULE>_test.py`, where `<MODULE>` is the
+the aforementioned Python module being tested. For example:
+
+* `text_test.py` tests class properties/methods in Python module `text.py`.
+
+It should be noted that File does not offer 100% [test coverage][test coverage].
+That said, File strives to offer reasonable enough test coverage.
+
 
 ## Documentation
 
@@ -133,6 +164,7 @@ Currently, there are no known issues.
 API documentation, tutorials, and other online references and made portions of
 File possible. See [REFERENCES.md](REFERENCES.md) for a list of some.
 
+[Anaconda]: https://www.anaconda.com
 [API]: https://en.wikipedia.org/wiki/API
 [CICD]: https://en.wikipedia.org/wiki/CI/CD
 [CLI]: https://en.wikipedia.org/wiki/Command-line_interface
@@ -141,11 +173,16 @@ File possible. See [REFERENCES.md](REFERENCES.md) for a list of some.
 [GitFlow]: https://github.com/nvie/gitflow
 [GNU Bash]: https://www.gnu.org/software/bash/
 [GNU Make]: https://www.gnu.org/software/make/
+[jinja]: https://jinja.palletsprojects.com
 [Linux]: https://www.linuxfoundation.org
-[Python]: https://www.python.org
-[Windows]: https://www.microsoft.com/en-us/windows
-[WSL]: https://docs.microsoft.com/en-us/windows/wsl/about
 [macOS]: https://www.apple.com/macos/
+[markdown]: https://github.com/Python-Markdown/markdown
 [pre-commit]: https://github.com/pre-commit/pre-commit
+[pandas]: https://pandas.pydata.org
+[Python]: https://www.python.org
+[PyPI]: https://pypi.org
 [test coverage]: https://en.wikipedia.org/wiki/Code_coverage
 [unit test]: hhttps://en.wikipedia.org/wiki/Unit_testing
+[Windows]: https://www.microsoft.com/en-us/windows
+[WSL]: https://docs.microsoft.com/en-us/windows/wsl/about
+[yaml]: http://pyyaml.org/wiki/LibYAML
