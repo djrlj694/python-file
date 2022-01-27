@@ -1,11 +1,11 @@
 """
-csvfile_test.py - A module for testing the `CSVFile` class.
+markdown_test.py - A module for testing the `MarkdownFile` class.
 """
 import os
 import unittest
 from pathlib import Path
 
-from file import CSVFile
+from file import MarkdownFile
 
 
 # =========================================================================== #
@@ -15,8 +15,8 @@ from file import CSVFile
 __author__ = 'Robert (Bob) L. Jones'
 __credits__ = ['Robert (Bob) L. Jones']
 
-__created_date__ = 'Jan 23, 2022'
-__modified_date__ = 'Jan 23, 2022'
+__created_date__ = 'Jan 26, 2022'
+__modified_date__ = 'Jan 26, 2022'
 
 
 # =========================================================================== #
@@ -29,10 +29,9 @@ __modified_date__ = 'Jan 23, 2022'
 PREFIX = Path(os.getenv('PREFIX', default='.')).resolve()
 
 ETC = PREFIX / 'etc'
+PARENT = ETC / 'content'
 
-PARENT = ETC / 'data'
-
-NAME = 'sample_3x3_header.csv'
+NAME = 'sample_email_body.md'
 PATH = PARENT / NAME
 
 
@@ -41,22 +40,28 @@ PATH = PARENT / NAME
 # =========================================================================== #
 
 
-class TestCSVFile(unittest.TestCase):
+class TestMarkdownFile(unittest.TestCase):
 
-    def test_CSVFile_init(self):
+    def test_MarkdownFile(self):
         """
-        Tests creating a `CSVFile` object.
+        Tests the `MarkdownFile` class.
         """
 
         # Create objects to be tested.
-        file = CSVFile(path=PATH, delimiter='|')
+        file = MarkdownFile(path=PATH)
 
         # Test assertions.
         self.assertEqual(
             # Actual
-            list(file)[0],
+            file.to_html().split('\n')[0],
             # Expected
-            ['Col_A', 'Col_B', 'Col_C'],
+            '<p>Hello!</p>',
+        )
+        self.assertEqual(
+            # Actual
+            file.to_xhtml().split('\n')[0],
+            # Expected
+            '<p>Hello!</p>',
         )
 
 
