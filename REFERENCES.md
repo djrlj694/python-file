@@ -9,6 +9,7 @@ developing or maintaining [File](README.md).
 1. https://daringfireball.net/projects/markdown/syntax
 2. https://www.markdownguide.org/basic-syntax/
 3. https://www.markdowntutorial.com/lesson/4/
+4. https://stackoverflow.com/questions/20303826/highlight-bash-shell-code-in-markdown-files
 
 ## Markup Languages: YAML
 
@@ -31,6 +32,17 @@ developing or maintaining [File](README.md).
 
 1. https://docs.docker.com/language/python/build-images/
 
+## Platforms: Git
+
+### General
+
+1. https://git-scm.com/
+2. https://gitforwindows.org
+
+### GitFlow
+
+1. https://github.com/nvie/gitflow
+
 ## Platforms: Make
 
 ### CLI
@@ -39,8 +51,9 @@ developing or maintaining [File](README.md).
 
 ### General
 
-1. https://en.wikipedia.org/wiki/Make_(software)
-2. https://en.wikipedia.org/wiki/Makefile
+1. https://www.gnu.org/software/make/
+2. https://en.wikipedia.org/wiki/Make_(software)
+3. https://en.wikipedia.org/wiki/Makefile
 
 ### Manuals
 
@@ -52,6 +65,10 @@ developing or maintaining [File](README.md).
 ### Tips & Tricks
 
 1. https://unix.stackexchange.com/questions/100786/why-does-diff-fail-when-invoked-from-a-makefile
+
+## Programming Languages: Bash
+
+1. https://www.gnu.org/software/bash/
 
 ## Programming Languages: Python
 
@@ -66,6 +83,9 @@ developing or maintaining [File](README.md).
 7. https://towardsdatascience.com/abstract-base-classes-in-python-fundamentals-for-data-scientists-3c164803224b
 8. https://vegibit.com/python-abstract-base-classes/
 
+### Anaconda
+
+1. https://www.anaconda.com
 ### API Documentation
 
 1. https://numpydoc.readthedocs.io/en/latest/format.html
@@ -103,6 +123,14 @@ developing or maintaining [File](README.md).
 9. https://stackoverflow.com/questions/48190959/how-do-i-append-a-string-to-a-path-in-python
 10. https://stackoverflow.com/questions/51125415/how-do-i-document-a-constructor-for-a-class-using-python-dataclasses
 
+### Functions
+
+1. https://towardsdatascience.com/10-examples-to-master-args-and-kwargs-in-python-6f1e8cc30749
+
+### General
+
+1. https://www.python.org
+
 ### Iterators
 
 1. https://stackoverflow.com/questions/4019971/how-to-implement-iter-self-for-a-container-object-python
@@ -120,21 +148,27 @@ developing or maintaining [File](README.md).
 5. https://stackoverflow.com/questions/9659361/order-of-results-from-pythons-dir-function/9659377
 6. https://www.tutorialsteacher.com/python/magic-methods-in-python
 
+### Markdown
+
+1. https://github.com/Python-Markdown/markdown
+
 ### Modules/Packages
 
 1. https://medium.com/analytics-vidhya/building-a-python-package-in-minutes-7bb702a6eb65
 2. https://medium.com/swlh/how-to-import-from-local-packages-and-modules-563985d4e3e0
-3. https://docs.python.org/3/tutorial/modules.html
-4. https://packaging.python.org/en/latest/tutorials/packaging-projects/
-4. https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html
-5. https://realpython.com/pypi-publish-python-package/
-6. https://realpython.com/run-python-scripts/
-7. https://towardsdatascience.com/publishing-your-own-python-package-3762f0d268ec
+3. https://pypi.org
+4. https://docs.python.org/3/tutorial/modules.html
+5. https://packaging.python.org/en/latest/tutorials/packaging-projects/
+6. https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html
+7. https://realpython.com/pypi-publish-python-package/
+8. https://realpython.com/run-python-scripts/
+9. https://towardsdatascience.com/publishing-your-own-python-package-3762f0d268ec
 
 ### Object-Oriented Programming (OOP)
 
 1. https://www.geeksforgeeks.org/calling-a-super-class-constructor-in-python/
 2. https://realpython.com/python-super/
+3. https://www.toptal.com/python/python-class-attributes-an-overly-thorough-guide
 
 ### Project Structure
 
@@ -193,13 +227,41 @@ developing or maintaining [File](README.md).
 3. https://stackoverflow.com/questions/59955751/abcmeta-object-is-not-subscriptable-when-trying-to-annotate-a-hash-variable
 4. https://www.stefaanlippens.net/circular-imports-type-hints-python.html
 
+### YAML
+
+1. http://pyyaml.org/wiki/LibYAML
+
+## Operating Systems: Linux
+
+1. https://www.linuxfoundation.org
+2. https://www.microsoft.com/en-us/windows
+
+## Operating Systems: macOS
+
+1. https://www.apple.com/macos/
+
+## Operating Systems: Windows
+
+1. https://www.microsoft.com/en-us/windows
+
 ## Software Engineering
+
+### Application Programming Interface (API)
+
+1. https://en.wikipedia.org/wiki/API
 
 ### CI/CD
 
 1. https://github.com/badges/shields
-2. https://naereen.github.io/badges/
-3. https://shields.io/category/version
+2. https://github.com/pre-commit/pre-commit
+3. https://naereen.github.io/badges/
+4. https://shields.io/category/version
+5. https://en.wikipedia.org/wiki/CI/CD
+
+### Testing
+
+1. https://en.wikipedia.org/wiki/Code_coverage
+2. hhttps://en.wikipedia.org/wiki/Unit_testing
 
 ### Versioning
 
