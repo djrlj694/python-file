@@ -71,6 +71,7 @@ Files in this project are organized as follows:
 
 ```shell
 .
+├── .dockerignore
 ├── .editorconfig
 ├── .env
 ├── .gitattributes

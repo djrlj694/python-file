@@ -1,16 +1,35 @@
-# REFERENCES
-# 1. https://github.com/cosmicpython/code/tree/appendix_project_structure
-# 2. https://github.com/mrako/python-example-project
+# =========================================================================== #
+# Copyright © 2022 | All rights reserved.
+# =========================================================================== #
+# PROGRAM: Dockerfile
+# PROJECT: File
+# COMPANY: djrlj694.dev
+# LICENSE: MIT
+#
+# PURPOSE:
+# - To define Docker images for testing File, both its nstallation and
+#   operation as a Python package.
+#
+# AUTHORS:
+# - Robert (Bob) L. Jones
+#
+# CREATED: Jan 15, 2022
+# REVISED: Jan 30, 2022
+#
+# REFERENCES:
+# - https://docs.docker.com/compose/compose-file/
+# =========================================================================== #
 
-version: "3"
-
+version: '3'
 services:
-  project:
-    build: .
-
-  test:
-    build: tests
-    volumes:
-      - .:/src
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
       - PYTHONDONTWRITEBYTECODE=1
+    volumes:
+      - ./src:/src
+      - ./tests:/tests
+    stdin_open: true  # docker run -i
+    tty: true         # docker run -t

@@ -20,13 +20,38 @@ developing or maintaining [File](README.md).
 
 ## Platforms: Docker
 
+### `.dockerignore`
+
+1. https://github.com/themattrix/python-pypi-template/blob/master/template/.dockerignore
+2. https://gist.github.com/KernelA/04b4d7691f28e264f72e76cfd724d448
+
 ### Compose
 
-1. https://docs.docker.com/compose/reference/build/
-2. https://docs.docker.com/compose/reference/down/
-3. https://docs.docker.com/compose/reference/logs/
-4. https://docs.docker.com/compose/reference/run/
-5. https://docs.docker.com/compose/reference/up/
+1. https://docs.docker.com/compose/compose-file/
+2. https://docs.docker.com/compose/reference/build/
+3. https://docs.docker.com/compose/reference/down/
+4. https://docs.docker.com/compose/reference/logs/
+5. https://docs.docker.com/compose/reference/run/
+6. https://docs.docker.com/compose/reference/up/
+7. https://stackoverflow.com/questions/36249744/interactive-shell-using-docker-compose
+
+### Dockerfile
+
+1. https://docs.docker.com/engine/reference/builder/
+2. https://luis-sena.medium.com/creating-the-perfect-python-dockerfile-51bdec41f1c8
+
+### `Dockerfile`
+
+1. https://github.com/cosmicpython/code/blob/appendix_project_structure/Dockerfile
+2. https://github.com/mrako/python-example-project/blob/master/Dockerfile
+3. https://github.com/themattrix/python-pypi-template/blob/master/template/Dockerfile.template
+
+### `docker-compose.yml`
+
+1. https://docs.docker.com/compose/compose-file/
+2. https://github.com/cosmicpython/code/blob/appendix_project_structure/docker-compose.yml
+3. https://github.com/mrako/python-example-project/blob/master/docker-compose.yml
+4. https://github.com/themattrix/python-pypi-template/blob/master/template/docker-compose.yml
 
 ### Python
 
