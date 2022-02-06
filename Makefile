@@ -14,25 +14,8 @@
 # - Robert (Bob) L. Jones
 #
 # CREATED: Jan 15, 2022
-# REVISED: Jan 23, 2022
+# REVISED: Feb 06, 2022
 # =========================================================================== #
-
-
-# =========================================================================== #
-# DEFAULT CONSTANTS
-# =========================================================================== #
-
-
-# -- Make -- #
-
-# Name of the main makefile
-MAKEFILE ?= $(firstword $(MAKEFILE_LIST))
-
-# Path of the directory containing the main makefile
-MAKEFILE_DIR ?= $(dir $(realpath $(MAKEFILE)))
-
-# Path of the directory containing secondary makefiles
-MAKE_DIR ?= $(MAKEFILE_DIR).make/
 
 
 # ============================================================================ #
@@ -69,16 +52,6 @@ test: test-file
 # =========================================================================== #
 
 
-# -- Feature Dependencies -- #
-
--include $(MAKE_DIR)features/formatting.mk
--include $(MAKE_DIR)features/helping.mk
-
-# -- Platform Dependencies -- #
-
--include $(MAKE_DIR)platforms/Docker.mk
--include $(MAKE_DIR)platforms/Python.mk
-
-# -- Test Dependencies -- #
-
--include $(MAKE_DIR)tests/file.mk
+-include .make/features/*.mk
+-include .make/platforms/*.mk
+-include .make/tests/*.mk
