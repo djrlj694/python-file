@@ -13,7 +13,7 @@
 # - Robert (Bob) L. Jones
 #
 # CREATED: Jan 15, 2022
-# REVISED: Jan 23, 2022
+# REVISED: Feb 08, 2022
 # =========================================================================== #
 
 
@@ -30,17 +30,17 @@
 python-clean: python-clean-build python-clean-pyc python-clean-test
 
 # Builds Python source & wheel package.
-python-dist: clean
+python-dist: python-clean
 	@python setup.py sdist
 	@python setup.py bdist_wheel
 	@ls -l dist
 
 # Install the Python package to the active Python's site-packages.
-python-install: clean
+python-install: python-clean
 	@python setup.py install
 
 # Packages & uploads a Python release.
-python-release: dist
+python-release: python-dist
 	@twine upload dist/*
 
 # -- Prerequisites for "python-clean" Target -- #
