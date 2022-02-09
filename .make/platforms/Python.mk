@@ -24,31 +24,31 @@
 
 # -- Python Targets -- #
 
-.PHONY: python-clean python-dist python-install python-release
+.PHONY: py-clean py-dist py-install py-release
 
 # Removes all Python artifacts.
-python-clean: python-clean-build python-clean-pyc python-clean-test
+py-clean: py-clean-build py-clean-pyc py-clean-test
 
 # Builds Python source & wheel package.
-python-dist: python-clean
+py-dist: py-clean
 	@python setup.py sdist
 	@python setup.py bdist_wheel
 	@ls -l dist
 
 # Install the Python package to the active Python's site-packages.
-python-install: python-clean
+py-install: py-clean
 	@python setup.py install
 
 # Packages & uploads a Python release.
-python-release: python-dist
+py-release: py-dist
 	@twine upload dist/*
 
-# -- Prerequisites for "python-clean" Target -- #
+# -- Prerequisites for "py-clean" Target -- #
 
-.PHONY: python-clean-build python-clean-pyc python-clean-test
+.PHONY: py-clean-build py-clean-pyc py-clean-test
 
 # Removes Python build artifacts.
-python-clean-build:
+py-clean-build:
 	@rm -fr build/
 	@rm -fr dist/
 	@rm -fr .eggs/
@@ -56,15 +56,15 @@ python-clean-build:
 	@find . -name '*.egg' -exec rm -f {} +
 
 # Removes Python file artifacts.
-python-clean-pyc:
+py-clean-pyc:
 	@find . -name '*.pyc' -exec rm -f {} +
 	@find . -name '*.pyo' -exec rm -f {} +
 	@find . -name '*~' -exec rm -f {} +
 	@find . -name '__pycache__' -exec rm -fr {} +
-	@find . -name '.mypy_cache' -exec rm -rf {} +
+	@find . -name '.mypy_cache' -exec rm -fr {} +
 
-# Removes Python test and coverage artifacts
-python-clean-test:
+# Removes Python test and coverage artifacts.
+py-clean-test:
 	@rm -fr .tox/
 	@rm -f .coverage
 	@rm -fr htmlcov/
