@@ -14,7 +14,7 @@
 # - Robert (Bob) L. Jones
 #
 # CREATED: Jan 15, 2022
-# REVISED: Feb 06, 2022
+# REVISED: Feb 08, 2022
 # =========================================================================== #
 
 
@@ -32,16 +32,16 @@
 all: help
 
 ## clean: Completes all cleanup activities.
-clean: python-clean
+clean: py-clean
 
 ## dist: Completes all distribution activities.
-dist: python-dist
+dist: py-dist
 
 ## install: Completes all installation activities.
-install: python-install
+install: py-install
 
 ## release: Completes all release activities.
-release: python-release
+release: py-release
 
 ## test: Completes all test activities.
 test: test-file
