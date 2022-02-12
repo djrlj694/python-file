@@ -27,7 +27,6 @@
 
 # `Targets` section header of the `make` command's online help.
 define targets_help
-Targets
   $(FG_CYAN)clean$(RESET)    Completes all cleanup activities.
   $(FG_CYAN)dist$(RESET)     Completes all distribution activities.
   $(FG_CYAN)help$(RESET)     Shows the `make` command's online help.
@@ -40,8 +39,7 @@ export targets_help
 
 # `Usage` section of the `make` command's online help.
 define usage_help
-Usage
-  make [$(FG_CYAN)target$(RESET)]
+make [$(FG_CYAN)options$(RESET)] [$(FG_CYAN)target$(RESET)]
 
 endef
 export usage_help
@@ -70,7 +68,8 @@ dist: py-dist
 # Shows the `make` command's online help.
 .PHONY: help
 help:
-	@printf "$$usage_help"
+	@printf "Usage: $$usage_help"
+	@echo "Target:"
 	@printf "$$targets_help"
 
 # Completes all installation activities.
