@@ -13,7 +13,7 @@
 # - Robert (Bob) L. Jones
 #
 # CREATED: Jan 15, 2022
-# REVISED: Jan 23, 2022
+# REVISED: Feb 12, 2022
 # =========================================================================== #
 
 
@@ -79,9 +79,8 @@ export usage_help
 
 # -- Main Targets -- #
 
-.PHONY: help
-
 ## help: Shows the `make` command's online help.
+.PHONY: help
 help:
 	@printf "$$usage_help"
 	@printf "$$targets_help"
