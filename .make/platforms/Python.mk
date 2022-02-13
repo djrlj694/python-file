@@ -51,9 +51,8 @@ VPIP := $(VENV)/bin/pip
 
 # -- Python Targets -- #
 
-.PHONY: py-check py-clean py-dist py-install py-release py-test
-
 # Checks to see if Python is available from the PATH.
+.PHONY: py-check
 py-check:
 	@if [ -z $(PYTHON) ]; then \
 		echo "'python3' could not be found."; \
@@ -62,35 +61,40 @@ py-check:
 	fi
 
 # Removes all Python artifacts.
+.PHONY: py-clean
 py-clean: py-clean-build py-clean-pyc py-clean-test
 
 # Builds Python source & wheel package.
+.PHONY: py-dist
 py-dist: py-clean
 	@python setup.py sdist
 	@python setup.py bdist_wheel
 	@ls -l dist
 
 # Install the Python package to the active Python's site-packages.
+.PHONY: py-install
 py-install: py-clean
 	@python setup.py install
 
 # Packages & uploads a Python release.
+.PHONY: py-release
 py-release: py-dist
 	@twine upload dist/*
 
 # Sets up a Python package installation via pip.
+.PHONY: py-setup
 py-setup: requirements.txt
 	@pip install -r requirements.txt
 
 # Tests a Python package in a Python virtual environment.
+.PHONY: py-test
 py-test: $(VACTIVATE)
 	@$(VPYTHON) -m unittest discover tests
 
 # -- Prerequisites for "py-clean" Target -- #
 
-.PHONY: py-clean-build py-clean-pyc py-clean-test py-clean-venv
-
 # Removes Python build artifacts.
+.PHONY: py-clean-build
 py-clean-build:
 	@rm -fr build/
 	@rm -fr dist/
@@ -99,6 +103,7 @@ py-clean-build:
 	@find . -name '*.egg' -exec rm -f {} +
 
 # Removes Python file artifacts.
+.PHONY: py-clean-pyc
 py-clean-pyc:
 	@find . -name '*.pyc' -exec rm -f {} +
 	@find . -name '*.pyo' -exec rm -f {} +
@@ -107,6 +112,7 @@ py-clean-pyc:
 	@find . -name '.mypy_cache' -exec rm -fr {} +
 
 # Removes Python test and coverage artifacts.
+.PHONY: py-clean-test
 py-clean-test:
 	@rm -fr .tox/
 	@rm -f .coverage
@@ -114,6 +120,7 @@ py-clean-test:
 	@rm -fr .pytest_cache
 
 # Removes Python virtual environment artifacts.
+.PHONY: py-clean-venv
 py-clean-venv:
 	@rm -fr $(VENV)
 
