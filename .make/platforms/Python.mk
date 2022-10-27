@@ -13,8 +13,35 @@
 # - Robert (Bob) L. Jones
 #
 # CREATED: Jan 15, 2022
-# REVISED: Jan 23, 2022
+# REVISED: Feb 12, 2022
 # =========================================================================== #
+
+
+# =========================================================================== #
+# CONDITIONAL VARIABLES
+# =========================================================================== #
+
+
+# Python virtual environment directory
+VENV ?= .venv
+
+
+# =========================================================================== #
+# SIMPLY EXPANDED VARIABLES
+# =========================================================================== #
+
+
+# PATH version of `python3` command
+PYTHON := $(shell command -v python3 2> /dev/null)
+
+# Python virtual environment version of the `activate` command
+VACTIVATE := $(VENV)/bin/activate
+
+# Python virtual environment version of the `python` command
+VPYTHON := $(VENV)/bin/python
+
+# Python virtual environment version of the `pip` command
+VPIP := $(VENV)/bin/pip
 
 
 # =========================================================================== #
@@ -24,31 +51,51 @@
 
 # -- Python Targets -- #
 
-.PHONY: python-clean python-dist python-install python-release
+# Checks to see if Python is available from the PATH.
+.PHONY: py-check
+py-check:
+	@if [ -z $(PYTHON) ]; then \
+		echo "'python3' could not be found."; \
+		echo "See https://docs.python.org/3/."; \
+		exit 2; \
+	fi
 
 # Removes all Python artifacts.
-python-clean: python-clean-build python-clean-pyc python-clean-test
+.PHONY: py-clean
+py-clean: py-clean-build py-clean-pyc py-clean-test
 
 # Builds Python source & wheel package.
-python-dist: clean
+.PHONY: py-dist
+py-dist: py-clean
 	@python setup.py sdist
 	@python setup.py bdist_wheel
 	@ls -l dist
 
 # Install the Python package to the active Python's site-packages.
-python-install: clean
+.PHONY: py-install
+py-install: py-clean
 	@python setup.py install
 
 # Packages & uploads a Python release.
-python-release: dist
+.PHONY: py-release
+py-release: py-dist
 	@twine upload dist/*
 
-# -- Prerequisites for "python-clean" Target -- #
+# Sets up a Python package installation via pip.
+.PHONY: py-setup
+py-setup: requirements.txt
+	@pip install -r requirements.txt
 
-.PHONY: python-clean-build python-clean-pyc python-clean-test
+# Tests a Python package in a Python virtual environment.
+.PHONY: py-test
+py-test: $(VACTIVATE)
+	@$(VPYTHON) -m unittest discover tests
+
+# -- Prerequisites for "py-clean" Target -- #
 
 # Removes Python build artifacts.
-python-clean-build:
+.PHONY: py-clean-build
+py-clean-build:
 	@rm -fr build/
 	@rm -fr dist/
 	@rm -fr .eggs/
@@ -56,16 +103,37 @@ python-clean-build:
 	@find . -name '*.egg' -exec rm -f {} +
 
 # Removes Python file artifacts.
-python-clean-pyc:
+.PHONY: py-clean-pyc
+py-clean-pyc:
 	@find . -name '*.pyc' -exec rm -f {} +
 	@find . -name '*.pyo' -exec rm -f {} +
 	@find . -name '*~' -exec rm -f {} +
 	@find . -name '__pycache__' -exec rm -fr {} +
-	@find . -name '.mypy_cache' -exec rm -rf {} +
+	@find . -name '.mypy_cache' -exec rm -fr {} +
 
-# Removes Python test and coverage artifacts
-python-clean-test:
+# Removes Python test and coverage artifacts.
+.PHONY: py-clean-test
+py-clean-test:
 	@rm -fr .tox/
 	@rm -f .coverage
 	@rm -fr htmlcov/
 	@rm -fr .pytest_cache
+
+# Removes Python virtual environment artifacts.
+.PHONY: py-clean-venv
+py-clean-venv:
+	@rm -fr $(VENV)
+
+
+# =========================================================================== #
+# NON-PHONY TARGETS
+# =========================================================================== #
+
+
+$(VACTIVATE): $(VPIP) requirements.txt
+	@$(VPIP) install -r requirements.txt
+
+$(VPIP): $(VPYTHON)
+
+$(VPYTHON): py-check
+	$(PYTHON) -m venv $(VENV)

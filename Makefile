@@ -14,25 +14,35 @@
 # - Robert (Bob) L. Jones
 #
 # CREATED: Jan 15, 2022
-# REVISED: Jan 23, 2022
+# REVISED: Feb 12, 2022
 # =========================================================================== #
 
 
 # =========================================================================== #
-# DEFAULT CONSTANTS
+# MACROS
 # =========================================================================== #
 
 
-# -- Make -- #
+# -- Help Strings -- #
 
-# Name of the main makefile
-MAKEFILE ?= $(firstword $(MAKEFILE_LIST))
+# `Targets` section header of the `make` command's online help.
+define targets_help
+  $(FG_CYAN)clean$(RESET)    Completes all cleanup activities.
+  $(FG_CYAN)dist$(RESET)     Completes all distribution activities.
+  $(FG_CYAN)help$(RESET)     Shows the `make` command's online help.
+  $(FG_CYAN)install$(RESET)  Completes all installation activities.
+  $(FG_CYAN)release$(RESET)  Completes all release activities.
+  $(FG_CYAN)test$(RESET)     Completes all test activities.
 
-# Path of the directory containing the main makefile
-MAKEFILE_DIR ?= $(dir $(realpath $(MAKEFILE)))
+endef
+export targets_help
 
-# Path of the directory containing secondary makefiles
-MAKE_DIR ?= $(MAKEFILE_DIR).make/
+# `Usage` section of the `make` command's online help.
+define usage_help
+make [$(FG_CYAN)options$(RESET)] [$(FG_CYAN)target$(RESET)]
+
+endef
+export usage_help
 
 
 # ============================================================================ #
@@ -42,25 +52,36 @@ MAKE_DIR ?= $(MAKEFILE_DIR).make/
 
 # -- Main Targets -- #
 
-.PHONY: all clean dist install release test
-
 # Force the default target execution sequence to display the online help if no
-# target is specified in the command line following "make".
+# target is specified in the command line following the `make` command.
+.PHONY: all
 all: help
 
-## clean: Completes all cleanup activities.
-clean: python-clean
+# Completes all cleanup activities.
+.PHONY: clean
+clean: py-clean
 
-## dist: Completes all distribution activities.
-dist: python-dist
+# Completes all distribution activities.
+.PHONY: dist
+dist: py-dist
 
-## install: Completes all installation activities.
-install: python-install
+# Shows the `make` command's online help.
+.PHONY: help
+help:
+	@printf "Usage: $$usage_help"
+	@echo "Target:"
+	@printf "$$targets_help"
 
-## release: Completes all release activities.
-release: python-release
+# Completes all installation activities.
+.PHONY: install
+install: py-install
 
-## test: Completes all test activities.
+# Completes all release activities.
+.PHONY: release
+release: py-release
+
+# Completes all test activities.
+.PHONY: test
 test: test-file
 
 
@@ -69,16 +90,6 @@ test: test-file
 # =========================================================================== #
 
 
-# -- Feature Dependencies -- #
-
--include $(MAKE_DIR)features/formatting.mk
--include $(MAKE_DIR)features/helping.mk
-
-# -- Platform Dependencies -- #
-
--include $(MAKE_DIR)platforms/Docker.mk
--include $(MAKE_DIR)platforms/Python.mk
-
-# -- Test Dependencies -- #
-
--include $(MAKE_DIR)tests/file.mk
+-include .make/features/*.mk
+-include .make/platforms/*.mk
+-include .make/tests/*.mk
